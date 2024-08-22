@@ -3,10 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.ulol .tite {
-  color: aquamarine;
-}
-
 body {
   font-family: "Be Vietnam Pro", sans-serif;
   box-sizing: border-box;
