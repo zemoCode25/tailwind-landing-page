@@ -3,26 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./src/styles/style.css" />
+    <!-- <link rel="stylesheet" href="./src/styles/style.css" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
     <!-- ------------HEADER--------------- -->
     <header
-      class="container flex align-middle items-center justify-between mx-auto px-4 py-6"
+      class="container flex align-middle items-center justify-between mx-auto px-4 py-6 z-50 relative"
+      id="header"
     >
       <img
         class="object-contain w-30"
         src="./public/dist/images/logo.svg"
         alt=""
       />
-      <button class="h-5 w-6 flex flex-col justify-between lg:hidden">
+      <button
+        class="h-5 w-6 flex flex-col justify-between lg:hidden"
+        id="hamburger"
+      >
         <span class="h-1 bg-black"></span>
         <span class="h-1 bg-black"></span><span class="h-1 bg-black"></span>
       </button>
-      <nav class="hidden lg:flex">
-        <ul class="flex justify-between space-x-6">
+      <nav class="hidden lg:flex" id="nav">
+        <ul class="flex justify-between lg:space-x-6">
           <li class="hover:underline hover:text-BrightRed">
             <a href="">Pricing</a>
           </li>
@@ -46,6 +50,10 @@
         Get Started
       </button>
     </header>
+    <div
+      class="hidden fixed inset-x-0 inset-y-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-60 z-40"
+      id="overlay"
+    ></div>
 
     <!-- ------------HERO--------------- -->
     <section>
@@ -345,5 +353,7 @@
         >
       </div>
     </footer>
+    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/hamburger.js"></script>
   </body>
 </html>
